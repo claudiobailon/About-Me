@@ -31,9 +31,14 @@ Let's play a game! I'll ask you a few yes or no questions about me and we'll see
   if correct (Indeed! My wife and I hace two cats named Blue and Ollie:)
   if false (Incorrect.  )
  */
+//===============================Greeting================================================================
+var usernameAnswer = prompt('Hello! What is your name?');
+alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
+alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!')
+
 //=====================Europe Question===========================================================================
-var EuropeAnswer = prompt('Let\'s play a game! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go! Have I ever been to Europe?');
-var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive
+var EuropeAnswer = prompt('Have I ever been to Europe?');
+var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
 
 if(europeAnswer === 'YES' || europeAnswer === 'Y'){
   alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
@@ -92,6 +97,8 @@ if(petAnswer === 'YES' || petAnswer === 'Y'){
   alert('Sorry, it\'s a yes or no question');
 }
 
-//===============================Greeting================================================================
-//var usernameAnswer = prompt('Now that you know a little about me, it\'s only fair that I get to learn Something about you! What is your name?');
+
+//===================================Final Message====================================================================
+
+alert('That was fun :D Thanks for going along with my game and thank you so much for visitng my page, ' + usernameAnswer + '! I\'ve written a little bio, so feel free to read it if you\'d like to learn a little bit more about me.');
 

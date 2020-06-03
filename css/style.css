@@ -6,4 +6,9 @@ h1{
 #p1{
   color:rgb(10,10,10);
   background-color:gainsboro
+  }
+#p2{
+  color: rgb(25, 50, 25);
+  background-color: silver;
 }
+
