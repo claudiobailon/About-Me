@@ -42,7 +42,7 @@ var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so i
 
 if(europeAnswer === 'YES' || europeAnswer === 'Y'){
   alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-}else if(europeAnswer === 'no' || europeAnswer === 'N'){
+}else if(europeAnswer === 'NO' || europeAnswer === 'N'){
   alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
 }else{
   alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
