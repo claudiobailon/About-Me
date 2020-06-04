@@ -38,6 +38,7 @@ alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I
 alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
 
 // //=====================Europe Question===========================================================================
+
 function askEuropeQuestion(){
 
   var europeAnswer = prompt('Have I ever been to Europe?');
@@ -60,21 +61,24 @@ var q1 = askEuropeQuestion();
 
 // //=========================Instrument Question==================================================================
 
+function askInstrumentQuestion(){
 
-var InstrumentAnswer = prompt('Do I know how to play an instrument?');
-var instrumentAnswer = InstrumentAnswer.toUpperCase();
-
-if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
-  alert('Correct! I can play the saxaphone and was in jazz band in high school.');
-  var q2 = 1;
-}else if(instrumentAnswer === 'NO' || instrumentAnswer === 'N'){
-  alert('Wrong, I can actually play the saxaphone and was in jazz band in high school.');
-  q2 = 0;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q2 = 0;
+  var instrumentAnswer = prompt('Do I know how to play an instrument?');
+  var instrumentAnswer = instrumentAnswer.toUpperCase();
+  
+  if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
+    alert('Correct! I can play the saxaphone and was in jazz band in high school.');
+    var q2 = 1;
+  }else if(instrumentAnswer === 'NO' || instrumentAnswer === 'N'){
+    alert('Wrong, I can actually play the saxaphone and was in jazz band in high school.');
+    q2 = 0;
+  }else{
+    alert('Sorry, it\'s a yes or no question');
+    q2 = 0;
+  } return q2;
 }
-
+  
+var q2 = askInstrumentQuestion();
 //=========================Marathon Question====================================================================
 
 var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
