@@ -104,21 +104,29 @@ var q3 = askEuropeQuestion();
 
 // //==========================Bear Questoin===================================================================
 
-var BearAnswer = prompt('Am I afraid of bears?');
-var bearAnswer = BearAnswer.toUpperCase();
- 
-if(bearAnswer === 'YES' || bearAnswer === 'Y'){
-  alert('Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-  var q4 = 0;
-}else if(bearAnswer === 'NO' || bearAnswer === 'N'){
-  alert('Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-  q4 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q4 = 0;
-}
+function askBearQuestion(){
+
+  
+  var bearAnswer = prompt('Am I afraid of bears?');
+  var bearAnswer = bearAnswer.toUpperCase();
+  
+  if(bearAnswer === 'YES' || bearAnswer === 'Y'){
+    alert('Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
+    var q4 = 0;
+  }else if(bearAnswer === 'NO' || bearAnswer === 'N'){
+    alert('Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
+    q4 = 1;
+  }else{
+    alert('Sorry, it\'s a yes or no question');
+    q4 = 0;
+  } return q4;
+} 
+
+var q4 = askBearQuestion();
 
 // //=============================Pet Question===============================================================
+
+
 
 var PetAnswer = prompt('Do I have any pets?');
 var petAnswer = PetAnswer.toUpperCase();
