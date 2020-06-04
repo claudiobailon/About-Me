@@ -100,7 +100,7 @@ function askMarathonQuestion(){
   } return q3;
 }
 
-var q3 = askEuropeQuestion();
+var q3 = askMarathonQuestion();
 
 // //==========================Bear Questoin===================================================================
 
@@ -148,40 +148,45 @@ var q5 = askPetAnswer();
 
 //========================================Interactive number questoin=====================================
 
- var intAnswer = prompt('Now you know a little more about me, but can you read my mind? I\'ll give you 4 tries to guess what number I\'m thinking of.  Pick a number between 1 and 50!');
- var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+function askNumberQuestion(){
 
-for (var i = 0; i < 4; i ++){
   
-  if(i === 0 && numAnswer === 32){
-    alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power? Or maybe you just somehow new my favorite number was 32...');
-    var q6 = 1;
-    break;
-  } else if(i === 3 && numAnswer === 32){
-    alert('Phew! Got it on the last try! 32 is my lucky number, maybe it\'s yours too!');
-    q6 = 1;
-    break;
-  }else if(numAnswer === 32){
-    alert('Impressive! It only took you ' + (i + 1) + ' tries! How\'d you know? Maybe you used your Sherlock Holmes skills to deduce my favorite number. Well done!');
-    q6 = 1;
-    break;
-  }else if(numAnswer < 32 && numAnswer > 0){
-   alert('Nope, too low.');
-  }else if ( numAnswer > 32 && numAnswer < 51){
-    alert('Whoops, too high.');
-      }else{
-    alert('That number isn\'t between 1 and 50! Try again');
-  }
-  if( i < 3 ){
-    intAnswer = prompt('Lets try agian! Pick a number between 1 and 50!');
-    numAnswer = parseInt(intAnswer); 
+  var intAnswer = prompt('Now you know a little more about me, but can you read my mind? I\'ll give you 4 tries to guess what number I\'m thinking of.  Pick a number between 1 and 50!');
+  var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+  
+  for (var i = 0; i < 4; i ++){
+    
+    if(i === 0 && numAnswer === 32){
+      alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power? Or maybe you just somehow new my favorite number was 32...');
+      var q6 = 1;
+      break;
+    } else if(i === 3 && numAnswer === 32){
+      alert('Phew! Got it on the last try! 32 is my lucky number, maybe it\'s yours too!');
+      q6 = 1;
+      break;
+    }else if(numAnswer === 32){
+      alert('Impressive! It only took you ' + (i + 1) + ' tries! How\'d you know? Maybe you used your Sherlock Holmes skills to deduce my favorite number. Well done!');
+      q6 = 1;
+      break;
+    }else if(numAnswer < 32 && numAnswer > 0){
+      alert('Nope, too low.');
+    }else if ( numAnswer > 32 && numAnswer < 51){
+      alert('Whoops, too high.');
+    }else{
+      alert('That number isn\'t between 1 and 50! Try again');
     }
-  if(i === 3){
-    alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
-    q6 = 0;
-  }
-
+    if( i < 3 ){
+      intAnswer = prompt('Lets try agian! Pick a number between 1 and 50!');
+      numAnswer = parseInt(intAnswer); 
+    }
+    if(i === 3){
+      alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
+      q6 = 0;
+    }
+  }return q6;
 }
+
+var q6 = askNumberQuestion();
 
 //==================================================================Array Question===============================================================================
 
