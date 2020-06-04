@@ -32,10 +32,13 @@ Let's play a game! I'll ask you a few yes or no questions about me and we'll see
   if false (Incorrect.  )
  */
 //===============================Greeting================================================================
+
 var usernameAnswer = prompt('Hello! What is your name?');
 alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
 alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
+
 // //=====================Europe Question===========================================================================
+
 var EuropeAnswer = prompt('Have I ever been to Europe?');
 var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
 
@@ -51,6 +54,8 @@ if(europeAnswer === 'YES' || europeAnswer === 'Y'){
 }
 
 // //=========================Instrument Question==================================================================
+
+
 var InstrumentAnswer = prompt('Do I know how to play an instrument?');
 var instrumentAnswer = InstrumentAnswer.toUpperCase();
 
@@ -66,6 +71,7 @@ if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
 }
 
 //=========================Marathon Question====================================================================
+
 var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
 var marathonAnswer = MarathonAnswer.toUpperCase();
 
@@ -97,6 +103,7 @@ if(bearAnswer === 'YES' || bearAnswer === 'Y'){
 }
 
 // //=============================Pet Question===============================================================
+
 var PetAnswer = prompt('Do I have any pets?');
 var petAnswer = PetAnswer.toUpperCase();
 
@@ -113,22 +120,8 @@ if(petAnswer === 'YES' || petAnswer === 'Y'){
 
 //========================================Interactive number questoin=====================================
 
-// if( numAnswer === '32'){
-//   alert('Holy cow, ' + usernameAnswer + ', you can read minds! WHat will you do with all that power?');
-// }else if(numAnswer < '32'){
-//   alert('Sorry, too low.');
-// }else if ( numAnswer > "32"){
-//   alert('Sorry, too high.');
-// }else if ( numAnswer === NaN){
-//   alert('That\'s not a number! Try putting in a numerical value. ');
-// }else{
-//   alert('That number isn\'t between 1 and 100! Try again');
-// }
-
-
-//var numAnswer = prompt("Now you know a little more about me, but can you read my mind? Pick a number between 1 and 100!"); 
  var intAnswer = prompt('Now you know a little more about me, but can you read my mind? I\'ll give you 4 tries to guess what number I\'m thinking of.  Pick a number between 1 and 50!');
-  var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+ var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
 
 for (var i = 0; i < 4; i ++){
   
@@ -148,12 +141,12 @@ for (var i = 0; i < 4; i ++){
    alert('Nope, too low.');
   }else if ( numAnswer > 32 && numAnswer < 51){
     alert('Whoops, too high.');
-  }else{
+      }else{
     alert('That number isn\'t between 1 and 50! Try again');
   }
   if( i < 3 ){
     intAnswer = prompt('Lets try agian! Pick a number between 1 and 50!');
-    numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+    numAnswer = parseInt(intAnswer); 
     }
   if(i === 3){
     alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
@@ -163,10 +156,6 @@ for (var i = 0; i < 4; i ++){
 }
 
 //==================================================================Array Question===============================================================================
-
-  
-//var AnsA = 0;
-//var testNum = 0;
 
 
 var hpArray = ["SIRIUS", "MCGONAGALL", "HERMIONE", "LUNA", "NEVILLE", "HAGRID"];
@@ -201,6 +190,3 @@ alert('You got ' + score + " out of 7 questions correct :) ");
 
 alert('That was fun :D Thanks for going along with my game and thank you so much for visitng my page, ' + usernameAnswer + '! I\'ve written a little bio, so feel free to read it if you\'d like to learn a little bit more about me.');
 
-// while(testNum < hpArray.length){
-//   console.log('testnum', testNum);
-//   testNum++;
