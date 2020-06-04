@@ -79,21 +79,28 @@ function askInstrumentQuestion(){
 }
   
 var q2 = askInstrumentQuestion();
+
 //=========================Marathon Question====================================================================
 
-var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
-var marathonAnswer = MarathonAnswer.toUpperCase();
+function askMarathonQuestion(){
 
-if(marathonAnswer === 'YES' || marathonAnswer === 'Y'){
-  alert('No, but thanks for believing in me!');
-  var q3 = 0;
-}else if(marathonAnswer === 'NO' || marathonAnswer === 'N'){
-  alert('You guessed it! Though maybe some day I\'ll work up the endurance!');
-  q3 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q3 = 0;
+  
+  var marathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
+  var marathonAnswer = marathonAnswer.toUpperCase();
+  
+  if(marathonAnswer === 'YES' || marathonAnswer === 'Y'){
+    alert('No, but thanks for believing in me!');
+    var q3 = 0;
+  }else if(marathonAnswer === 'NO' || marathonAnswer === 'N'){
+    alert('You guessed it! Though maybe some day I\'ll work up the endurance!');
+    q3 = 1;
+  }else{
+    alert('Sorry, it\'s a yes or no question');
+    q3 = 0;
+  } return q3;
 }
+
+var q3 = askEuropeQuestion();
 
 // //==========================Bear Questoin===================================================================
 
