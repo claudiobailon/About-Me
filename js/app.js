@@ -38,20 +38,25 @@ alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I
 alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
 
 // //=====================Europe Question===========================================================================
+function askEuropeQuestion(){
 
-var EuropeAnswer = prompt('Have I ever been to Europe?');
-var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
+  var europeAnswer = prompt('Have I ever been to Europe?');
+  europeAnswer = europeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
+  
+  if(europeAnswer === 'YES' || europeAnswer === 'Y'){
+    alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
+    var q1 = 0;
+  }else if(europeAnswer === 'NO' || europeAnswer === 'N'){
+    alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
+    q1 = 1;
+  }else{
+    alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
+    q1 = 0;
+  } return q1;
+} 
 
-if(europeAnswer === 'YES' || europeAnswer === 'Y'){
-  alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-  var q1 = 0;
-}else if(europeAnswer === 'NO' || europeAnswer === 'N'){
-  alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-  q1 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
-  q1 = 0;
-}
+var q1 = askEuropeQuestion();
+// console.log('q1', q1)
 
 // //=========================Instrument Question==================================================================
 
