@@ -33,72 +33,70 @@ Let's play a game! I'll ask you a few yes or no questions about me and we'll see
  */
 //===============================Greeting================================================================
 var usernameAnswer = prompt('Hello! What is your name?');
-alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
-alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
-//=====================Europe Question===========================================================================
-var EuropeAnswer = prompt('Have I ever been to Europe?');
-var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
+// alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
+// alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
+// //=====================Europe Question===========================================================================
+// var EuropeAnswer = prompt('Have I ever been to Europe?');
+// var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
 
-if(europeAnswer === 'YES' || europeAnswer === 'Y'){
-  alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-}else if(europeAnswer === 'NO' || europeAnswer === 'N'){
-  alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-}else{
-  alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
-}
+// if(europeAnswer === 'YES' || europeAnswer === 'Y'){
+//   alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
+// }else if(europeAnswer === 'NO' || europeAnswer === 'N'){
+//   alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
+// }else{
+//   alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
+// }
 
-//=========================Instrument Question==================================================================
-var InstrumentAnswer = prompt('Do I know how to play an instrument?');
-var instrumentAnswer = InstrumentAnswer.toUpperCase();
+// //=========================Instrument Question==================================================================
+// var InstrumentAnswer = prompt('Do I know how to play an instrument?');
+// var instrumentAnswer = InstrumentAnswer.toUpperCase();
 
-if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
-  alert('Correct! I can play the saxaphone and was in jazz band in high school.');
-}else if(instrumentAnswer === 'NO' || instrumentAnswer === 'N'){
-  alert('Wrong, I can actually play the saxaphone and was in jazz band in high school.');
-}else{
-  alert('Sorry, it\'s a yes or no question');
-}
+// if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
+//   alert('Correct! I can play the saxaphone and was in jazz band in high school.');
+// }else if(instrumentAnswer === 'NO' || instrumentAnswer === 'N'){
+//   alert('Wrong, I can actually play the saxaphone and was in jazz band in high school.');
+// }else{
+//   alert('Sorry, it\'s a yes or no question');
+// }
 
-//=========================Marathon Question====================================================================
-var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
-var marathonAnswer = MarathonAnswer.toUpperCase();
+// //=========================Marathon Question====================================================================
+// var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
+// var marathonAnswer = MarathonAnswer.toUpperCase();
 
-if(marathonAnswer === 'YES' || marathonAnswer === 'Y'){
-  alert('No, but thanks for believing in me!');
-}else if(marathonAnswer === 'NO' || marathonAnswer === 'N'){
-  alert('You guessed it! Though maybe some day I\'ll work up the endurance!');
-}else{
-  alert('Sorry, it\'s a yes or no question');
-}
+// if(marathonAnswer === 'YES' || marathonAnswer === 'Y'){
+//   alert('No, but thanks for believing in me!');
+// }else if(marathonAnswer === 'NO' || marathonAnswer === 'N'){
+//   alert('You guessed it! Though maybe some day I\'ll work up the endurance!');
+// }else{
+//   alert('Sorry, it\'s a yes or no question');
+// }
 
-//==========================Bear Questoin===================================================================
+// //==========================Bear Questoin===================================================================
 
-var BearAnswer = prompt('Am I afraid of bears?');
-var bearAnswer = BearAnswer.toUpperCase();
+// var BearAnswer = prompt('Am I afraid of bears?');
+// var bearAnswer = BearAnswer.toUpperCase();
  
-if(bearAnswer === 'YES' || bearAnswer === 'Y'){
-  alert('Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-}else if(bearAnswer === 'NO' || bearAnswer === 'N'){
-  alert('Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-}else{
-  alert('Sorry, it\'s a yes or no question');
-}
+// if(bearAnswer === 'YES' || bearAnswer === 'Y'){
+//   alert('Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
+// }else if(bearAnswer === 'NO' || bearAnswer === 'N'){
+//   alert('Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
+// }else{
+//   alert('Sorry, it\'s a yes or no question');
+// }
 
-//=============================Pet Question===============================================================
-var PetAnswer = prompt('Do I have any pets?');
-var petAnswer = PetAnswer.toUpperCase();
+// //=============================Pet Question===============================================================
+// var PetAnswer = prompt('Do I have any pets?');
+// var petAnswer = PetAnswer.toUpperCase();
 
-if(petAnswer === 'YES' || petAnswer === 'Y'){
-  alert('Indeed! My wife and I have two cats named Blue and Ollie :)');
-}else if(petAnswer === 'NO' || petAnswer === 'N'){
-  alert('You are mistaken! My wife and I have two cats named Blue and Ollie :)');
-}else{
-  alert('Sorry, it\'s a yes or no question');
-}
+// if(petAnswer === 'YES' || petAnswer === 'Y'){
+//   alert('Indeed! My wife and I have two cats named Blue and Ollie :)');
+// }else if(petAnswer === 'NO' || petAnswer === 'N'){
+//   alert('You are mistaken! My wife and I have two cats named Blue and Ollie :)');
+// }else{
+//   alert('Sorry, it\'s a yes or no question');
+// }
 
 //========================================Interactive number questoin=====================================
- var numAnswer = prompt("Now you know a little more about me, but can you read my mind? Pick a number between 1 and 100!"); 
-
 
 // if( numAnswer === '32'){
 //   alert('Holy cow, ' + usernameAnswer + ', you can read minds! WHat will you do with all that power?');
@@ -113,21 +111,39 @@ if(petAnswer === 'YES' || petAnswer === 'Y'){
 // }
 
 
-for( var i = 0; i < 4; i ++ ){
+// var numAnswer = prompt("Now you know a little more about me, but can you read my mind? Pick a number between 1 and 100!"); 
 
-  if(i = 0 && numAnswer === "32"){
+for (var i = 0; i < 4; i++){
+  
+  var intAnswer = prompt('Now you know a little more about me, but can you read my mind? Pick a number between 1 and 100!');
+  var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+  
+  if(i === 0 && numAnswer === 32){
     alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power?');
     break;
-  }else if(numAnswer < '32'){
-  alert('Sorry, too low.');
-}else if ( numAnswer > "32"){
-  alert('Sorry, too high.');
-}else if ( numAnswer === NaN){
-  alert('That\'s not a number! Try putting in a numerical value. ');
-}else{
-  alert('That number isn\'t between 1 and 100! Try again');
+  } else if(numAnswer === 32){
+    alert('Impressive! It only took you ' + (i + 1) + ' tries!')
+    break;
+  }else if(numAnswer < 32 && numAnswer > 0){
+   alert('Sorry, too low.');
+  }else if ( numAnswer > 32 && numAnswer < 101){
+    alert('Sorry, too high.');
+  }else{
+    alert('That number isn\'t between 1 and 100! Try again');
+  }
+  if(i === 3){
+    alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
+  }
 
 }
+
+//==================================================================
+
+
+
+// for ( var i = 0; i < 4; i ++){
+
+//   alert(i);
 
 
 //===================================Final Message====================================================================
