@@ -126,21 +126,25 @@ var q4 = askBearQuestion();
 
 // //=============================Pet Question===============================================================
 
+function askPetAnswer(){
 
-
-var PetAnswer = prompt('Do I have any pets?');
-var petAnswer = PetAnswer.toUpperCase();
-
-if(petAnswer === 'YES' || petAnswer === 'Y'){
-  alert('Indeed! My wife and I have two cats named Blue and Ollie :)');
-  var q5 = 1;
-}else if(petAnswer === 'NO' || petAnswer === 'N'){
-  alert('You are mistaken! My wife and I have two cats named Blue and Ollie :)');
-  q5 = 0;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q5 = 0;
+  
+  var petAnswer = prompt('Do I have any pets?');
+  var petAnswer = petAnswer.toUpperCase();
+  
+  if(petAnswer === 'YES' || petAnswer === 'Y'){
+    alert('Indeed! My wife and I have two cats named Blue and Ollie :)');
+    var q5 = 1;
+  }else if(petAnswer === 'NO' || petAnswer === 'N'){
+    alert('You are mistaken! My wife and I have two cats named Blue and Ollie :)');
+    q5 = 0;
+  }else{
+    alert('Sorry, it\'s a yes or no question');
+    q5 = 0;
+  } return q5
 }
+
+var q5 = askPetAnswer();
 
 //========================================Interactive number questoin=====================================
 
