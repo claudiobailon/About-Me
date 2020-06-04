@@ -34,8 +34,7 @@ Let's play a game! I'll ask you a few yes or no questions about me and we'll see
 //===============================Greeting================================================================
 var usernameAnswer = prompt('Hello! What is your name?');
 alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
-alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!')
-
+alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
 //=====================Europe Question===========================================================================
 var EuropeAnswer = prompt('Have I ever been to Europe?');
 var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
@@ -97,8 +96,40 @@ if(petAnswer === 'YES' || petAnswer === 'Y'){
   alert('Sorry, it\'s a yes or no question');
 }
 
+//========================================Interactive number questoin=====================================
+ var numAnswer = prompt("Now you know a little more about me, but can you read my mind? Pick a number between 1 and 100!"); 
+
+
+// if( numAnswer === '32'){
+//   alert('Holy cow, ' + usernameAnswer + ', you can read minds! WHat will you do with all that power?');
+// }else if(numAnswer < '32'){
+//   alert('Sorry, too low.');
+// }else if ( numAnswer > "32"){
+//   alert('Sorry, too high.');
+// }else if ( numAnswer === NaN){
+//   alert('That\'s not a number! Try putting in a numerical value. ');
+// }else{
+//   alert('That number isn\'t between 1 and 100! Try again');
+// }
+
+
+for( var i = 0; i < 4; i ++ ){
+
+  if(i = 0 && numAnswer === "32"){
+    alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power?');
+    break;
+  }else if(numAnswer < '32'){
+  alert('Sorry, too low.');
+}else if ( numAnswer > "32"){
+  alert('Sorry, too high.');
+}else if ( numAnswer === NaN){
+  alert('That\'s not a number! Try putting in a numerical value. ');
+}else{
+  alert('That number isn\'t between 1 and 100! Try again');
+
+}
+
 
 //===================================Final Message====================================================================
 
 alert('That was fun :D Thanks for going along with my game and thank you so much for visitng my page, ' + usernameAnswer + '! I\'ve written a little bio, so feel free to read it if you\'d like to learn a little bit more about me.');
-
