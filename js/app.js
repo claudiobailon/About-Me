@@ -37,140 +37,181 @@ var usernameAnswer = prompt('Hello! What is your name?');
 alert('Hello, ' + usernameAnswer + '! My name is Claudio, welcome to my page.  I\'m excited to share a little bit about myself with you!');
 alert('Let\'s play a game, ' + usernameAnswer + '! I\'ll ask you a few yes or no questions about myself and we\'ll see how many you can guess correctly. Here we go!');
 
+var questionsArray = ['Have I ever been to Europe?', 'Do I know how to play an instrument?', 'Do you think I\'ve ever run a marathon?', 'Am I afraid of bears?', 'Do I have any pets?'];
+
+var answerArray = ['no', 'n', 'yes', 'y'];
+var responseArray = ['Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(', 'Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(', 'Sorry, it\'s a yes or no question', 'Correct! I can play the saxaphone and was in jazz band in high school.', 'Wrong, I can actually play the saxaphone and was in jazz band in high school.', 'No, but thanks for believing in me!', 'You guessed it! Though maybe some day I\'ll work up the endurance!', 'Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?', 'Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?', 'Indeed! My wife and I have two cats named Blue and Ollie :)', 'You are mistaken! My wife and I have two cats named Blue and Ollie :)'];
+
 // //=====================Europe Question===========================================================================
 
-var EuropeAnswer = prompt('Have I ever been to Europe?');
-var europeAnswer = EuropeAnswer.toUpperCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
+function askEuropeQuestion(){
 
-if(europeAnswer === 'YES' || europeAnswer === 'Y'){
-  alert('Nope, unfortunately. I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-  var q1 = 0;
-}else if(europeAnswer === 'NO' || europeAnswer === 'N'){
-  alert('Correct! I was actually planning a trip there for later this year, but COVID 19 derailed that :(');
-  q1 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');//Gives proper response if they say anything besides yes or no
-  q1 = 0;
-}
+  var europeAnswer = prompt(questionsArray[0]);
+  europeAnswer = europeAnswer.toLowerCase(); // makes answer all upercase so input is not case sensitive, used https://love2dev.com/blog/javascript-touppercase-tolowercase/ to figure out how to use it
+  
+  if(europeAnswer === answerArray[2] || europeAnswer === answerArray[3]){
+    alert(responseArray[0]);
+    var q1 = 0;
+  }else if(europeAnswer === answerArray[0] || europeAnswer === answerArray[1]){
+    alert(responseArray[1]);
+    q1 = 1;
+  }else{
+    alert(responseArray[2]);//Gives proper response if they say anything besides yes or no
+    q1 = 0;
+  } return q1;
+} 
+
+var q1 = askEuropeQuestion();
 
 // //=========================Instrument Question==================================================================
 
+function askInstrumentQuestion(){
 
-var InstrumentAnswer = prompt('Do I know how to play an instrument?');
-var instrumentAnswer = InstrumentAnswer.toUpperCase();
-
-if(instrumentAnswer === 'YES' || instrumentAnswer === 'Y'){
-  alert('Correct! I can play the saxaphone and was in jazz band in high school.');
-  var q2 = 1;
-}else if(instrumentAnswer === 'NO' || instrumentAnswer === 'N'){
-  alert('Wrong, I can actually play the saxaphone and was in jazz band in high school.');
-  q2 = 0;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q2 = 0;
+  var instrumentAnswer = prompt(questionsArray[1]);
+  var instrumentAnswer = instrumentAnswer.toLowerCase();
+  
+  if(instrumentAnswer === answerArray[2] || instrumentAnswer === answerArray[3]){
+    alert(responseArray[3]);
+    var q2 = 1;
+  }else if(instrumentAnswer === answerArray[0] || instrumentAnswer === answerArray[1]){
+    alert(responseArray[4]);
+    q2 = 0;
+  }else{
+    alert(responseArray[2]);
+    q2 = 0;
+  } return q2;
 }
+  
+var q2 = askInstrumentQuestion();
 
 //=========================Marathon Question====================================================================
 
-var MarathonAnswer = prompt('Do you think I\'ve ever run a marathon?');
-var marathonAnswer = MarathonAnswer.toUpperCase();
+function askMarathonQuestion(){
 
-if(marathonAnswer === 'YES' || marathonAnswer === 'Y'){
-  alert('No, but thanks for believing in me!');
-  var q3 = 0;
-}else if(marathonAnswer === 'NO' || marathonAnswer === 'N'){
-  alert('You guessed it! Though maybe some day I\'ll work up the endurance!');
-  q3 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q3 = 0;
+  
+  var marathonAnswer = prompt(questionsArray[2]);
+  var marathonAnswer = marathonAnswer.toLowerCase();
+  
+  if(marathonAnswer === answerArray[2] || marathonAnswer === answerArray[3]){
+    alert(responseArray[5]);
+    var q3 = 0;
+  }else if(marathonAnswer === answerArray[0] || marathonAnswer === answerArray[1]){
+    alert(responseArray[6]);
+    q3 = 1;
+  }else{
+    alert(responseArray[2]);
+    q3 = 0;
+  } return q3;
 }
+
+var q3 = askMarathonQuestion();
 
 // //==========================Bear Questoin===================================================================
 
-var BearAnswer = prompt('Am I afraid of bears?');
-var bearAnswer = BearAnswer.toUpperCase();
- 
-if(bearAnswer === 'YES' || bearAnswer === 'Y'){
-  alert('Wrong!. Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-  var q4 = 0;
-}else if(bearAnswer === 'NO' || bearAnswer === 'N'){
-  alert('Correct! Well, its not a phobia at least, they\'re actually my favorite animal. But if I came across one in the wild, I\'d be a little, um, concerned. I mean, who doesn\'t have a healthy fear of bears?');
-  q4 = 1;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q4 = 0;
-}
+function askBearQuestion(){
+
+  
+  var bearAnswer = prompt(questionsArray[3]);
+  var bearAnswer = bearAnswer.toLowerCase();
+  
+  if(bearAnswer === answerArray[2] || bearAnswer === answerArray[3]){
+    alert(responseArray[7]);
+    var q4 = 0;
+  }else if(bearAnswer === answerArray[0] || bearAnswer === answerArray[1]){
+    alert(responseArray[8]);
+    q4 = 1;
+  }else{
+    alert(responseArray[2]);
+    q4 = 0;
+  } return q4;
+} 
+
+var q4 = askBearQuestion();
 
 // //=============================Pet Question===============================================================
 
-var PetAnswer = prompt('Do I have any pets?');
-var petAnswer = PetAnswer.toUpperCase();
+function askPetAnswer(){
 
-if(petAnswer === 'YES' || petAnswer === 'Y'){
-  alert('Indeed! My wife and I have two cats named Blue and Ollie :)');
-  var q5 = 1;
-}else if(petAnswer === 'NO' || petAnswer === 'N'){
-  alert('You are mistaken! My wife and I have two cats named Blue and Ollie :)');
-  q5 = 0;
-}else{
-  alert('Sorry, it\'s a yes or no question');
-  q5 = 0;
+  
+  var petAnswer = prompt(questionsArray[4]);
+  var petAnswer = petAnswer.toLowerCase();
+  
+  if(petAnswer === answerArray[2] || petAnswer === answerArray[3]){
+    alert(responseArray[9]);
+    var q5 = 1;
+  }else if(petAnswer === answerArray[0] || petAnswer === [answerArray[1]]){
+    alert(responseArray[10]);
+    q5 = 0;
+  }else{
+    alert(responseArray[2]);
+    q5 = 0;
+  } return q5
 }
+
+var q5 = askPetAnswer();
+
 
 //========================================Interactive number questoin=====================================
 
- var intAnswer = prompt('Now you know a little more about me, but can you read my mind? I\'ll give you 4 tries to guess what number I\'m thinking of.  Pick a number between 1 and 50!');
- var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+function askNumberQuestion(){
 
-for (var i = 0; i < 4; i ++){
   
-  if(i === 0 && numAnswer === 32){
-    alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power? Or maybe you just somehow new my favorite number was 32...');
-    var q6 = 1;
-    break;
-  } else if(i === 3 && numAnswer === 32){
-    alert('Phew! Got it on the last try! 32 is my lucky number, maybe it\'s yours too!');
-    q6 = 1;
-    break;
-  }else if(numAnswer === 32){
-    alert('Impressive! It only took you ' + (i + 1) + ' tries! How\'d you know? Maybe you used your Sherlock Holmes skills to deduce my favorite number. Well done!');
-    q6 = 1;
-    break;
-  }else if(numAnswer < 32 && numAnswer > 0){
-   alert('Nope, too low.');
-  }else if ( numAnswer > 32 && numAnswer < 51){
-    alert('Whoops, too high.');
-      }else{
-    alert('That number isn\'t between 1 and 50! Try again');
-  }
-  if( i < 3 ){
-    intAnswer = prompt('Lets try agian! Pick a number between 1 and 50!');
-    numAnswer = parseInt(intAnswer); 
+  var intAnswer = prompt('Now you know a little more about me, but can you read my mind? I\'ll give you 4 tries to guess what number I\'m thinking of.  Pick a number between 1 and 50!');
+  var numAnswer = parseInt(intAnswer); // Jennifer Chinzi helped me figure this out
+  
+  for (var i = 0; i < 4; i ++){
+    
+    if(i === 0 && numAnswer === 32){
+      alert('Holy cow, ' + usernameAnswer + ', you can read minds! What will you do with all that power? Or maybe you just somehow new my favorite number was 32...');
+      var q6 = 1;
+      break;
+    } else if(i === 3 && numAnswer === 32){
+      alert('Phew! Got it on the last try! 32 is my lucky number, maybe it\'s yours too!');
+      q6 = 1;
+      break;
+    }else if(numAnswer === 32){
+      alert('Impressive! It only took you ' + (i + 1) + ' tries! How\'d you know? Maybe you used your Sherlock Holmes skills to deduce my favorite number. Well done!');
+      q6 = 1;
+      break;
+    }else if(numAnswer < 32 && numAnswer > 0){
+      alert('Nope, too low.');
+    }else if ( numAnswer > 32 && numAnswer < 51){
+      alert('Whoops, too high.');
+    }else{
+      alert('That number isn\'t between 1 and 50! Try again');
     }
-  if(i === 3){
-    alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
-    q6 = 0;
-  }
-
+    if( i < 3 ){
+      intAnswer = prompt('Lets try agian! Pick a number between 1 and 50!');
+      numAnswer = parseInt(intAnswer); 
+    }
+    if(i === 3){
+      alert("Sorry, out of luck! It was 32 and it happens to be my favorite number!");
+      q6 = 0;
+    }
+  }return q6;
 }
+
+var q6 = askNumberQuestion();
 
 //==================================================================Array Question===============================================================================
 
 
-var hpArray = ["SIRIUS", "MCGONAGALL", "HERMIONE", "LUNA", "NEVILLE", "HAGRID"];
+function askHPQuestion(){
 
-var hpCharAnswer = prompt('I\'m a big Harry Potter fan, but who isn\'t? Everyone has their favorite characters, but can you guess one of my top 6? I\'ll give you 6 tries.').toUpperCase();
-
-for(var guess =0; guess < 6; guess++){
-
-  if(hpCharAnswer === hpArray[0] || hpCharAnswer === hpArray[1] || hpCharAnswer === hpArray[2] || hpCharAnswer === hpArray[3] || hpCharAnswer === hpArray[4] || hpCharAnswer === hpArray[5]){
-     alert('Correct! That\'s one of them! My favorites, in no particular order are: Sirius, Mgconagall, Hermione, Luna, Neville, and, last but not least, Hagrid!');
+  
+  var hpArray = ["SIRIUS", "MCGONAGALL", "HERMIONE", "LUNA", "NEVILLE", "HAGRID"];
+  
+  var hpCharAnswer = prompt('I\'m a big Harry Potter fan, but who isn\'t? Everyone has their favorite characters, but can you guess one of my top 6? I\'ll give you 6 tries.').toUpperCase();
+  
+  for(var guess =0; guess < 6; guess++){
+    
+    if(hpCharAnswer === hpArray[0] || hpCharAnswer === hpArray[1] || hpCharAnswer === hpArray[2] || hpCharAnswer === hpArray[3] || hpCharAnswer === hpArray[4] || hpCharAnswer === hpArray[5]){
+      alert('Correct! That\'s one of them! My favorites, in no particular order are: Sirius, Mgconagall, Hermione, Luna, Neville, and, last but not least, Hagrid!');
       var q7 = 1;
-     break;
+      break;
     }else if(guess < 5 && guess >= 0){
       alert('Nice try, but no');
-     }
+    }
     if(guess < 4){
       var hpCharAnswer = prompt('I believe in you! Make another guess.').toUpperCase();
     }
@@ -181,8 +222,11 @@ for(var guess =0; guess < 6; guess++){
       alert('Really? I thought I gave it away! Oh well. FYI, my favorites, in no particular order are: Sirius, Mgconagall, Hermione, Luna, Neville, and the tall and hairy Hagrid!');
       q7=0;
     }
-} 
+  } return q7; 
+}
 
+var q7 = askHPQuestion();
+  
 var score= q1 + q2 + q3 + q4 + q5 + q6 + q7;
 
 alert('You got ' + score + " out of 7 questions correct :) ");
